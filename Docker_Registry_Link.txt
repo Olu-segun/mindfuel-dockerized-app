@@ -1,1 +1,1 @@
-Task 1 ==== https://hub.docker.com/repository/docker/olusegun1992/mindfuel-app/general
+Task 1 ==== [Mindfuel Docker Hub Repository](https://hub.docker.com/repository/docker/olusegun1992/mindfuel-app/general)
