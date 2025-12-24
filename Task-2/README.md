@@ -138,5 +138,5 @@ Retry logic in the app ensures stable DB connections during startup.
 Secrets are managed via .env for security and flexibility.
 
 ## Logs
-
-![App logs showing successful quote delivery](images/logs-screenshot.png)
+s
+![App logs showing successful quote delivery](logs-screenshot.png)
