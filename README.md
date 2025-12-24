@@ -1,7 +1,6 @@
 # 📦 MindFuel – Dockerized Quote Delivery Service
 
 This repository contains two tasks demonstrating how to containerize a Python-based email quote delivery service and run it as a multi-container application using Docker and Docker Compose.
-
 The project fetches inspirational quotes, stores logs, connects to a relational database, and delivers emails to active subscribers.
 ---
 ## 📁 Repository Structure
@@ -19,7 +18,6 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 │   ├── logs/
 │   ├── .env
 │   └── README.md
-│
 
 ├── Task-2/
 │   ├── docker-compose.yml        # Docker Compose file
@@ -33,10 +31,9 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 │   │   ├── database.py
 │   │   └── init.sql              # Database initialization script
 │   └── .env                      # Environment variables
-</pre>
-
 │
-└── README.md 
+└── README.md
+</pre>
 ---
 ## ✅ Task 1: Containerize the Python Email Delivery Service
 #### 🎯 Objective
