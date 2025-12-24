@@ -1,14 +1,19 @@
 import psycopg2
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
+import time
 
 def get_connection():
-    return psycopg2.connect(
-        host=os.getenv("PGHOST", "postgres"),
-        dbname=os.getenv("PGDATABASE", "app_db"),
-        user=os.getenv("PGUSER", "postgres"),
-        password=os.getenv("PGPASSWORD", "app_pass"),
-        port=os.getenv("PGPORT", "5432")
-    )
+    for attempt in range(5):
+        try:
+            conn = psycopg2.connect(
+                host="postgres",
+                port=5432,
+                user="postgres",
+                password="postgres",
+                dbname="mindfuel_db"
+            )
+            print("Database connection established.")
+            return conn
+        except psycopg2.OperationalError as e:
+            print(f"Database connection failed (attempt {attempt+1}/5): {e}")
+            time.sleep(5)
+    raise Exception("Could not connect to Postgres after 5 attempts")
