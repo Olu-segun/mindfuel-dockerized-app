@@ -54,18 +54,17 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
     •   Image built, tested, and published to a registry
 ---
 ### 🐳 Dockerfile Overview
+#### The Dockerfile:
 
-•   The Dockerfile:
+    •   Uses python:3.11-slim
 
-•   Uses python:3.11-slim
+    •   Installs required system and Python dependencies
 
-•   Installs required system and Python dependencies
+    •   Copies application source code
 
-•   Copies application source code
+    •   Loads environment variables
 
-•   Loads environment variables
-
-•   Starts the quote delivery service automatically
+    •   Starts the quote delivery service automatically
 
 ### 🛠️ Build the Image Locally
     docker build -t mindfuel-app .
@@ -99,8 +98,8 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 ### 🔧 Requirements Implemented
 #### Services Defined
 
- • App – Python quote delivery service
+    •   App – Python quote delivery service
 
- • Db – PostgreSQL database
+    •   Db – PostgreSQL database
 
- • pgadmin - App – Python quote delivery service
+    •   pgadmin - App – Python quote delivery service
