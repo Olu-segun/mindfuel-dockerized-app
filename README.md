@@ -92,6 +92,10 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
     docker pull olusegun1992/mindfuel-app:1.0
     docker run --env-file .env olusegun1992/mindfuel-app:1.0
 ---
+## Logs
+
+![App logs showing successful quote delivery](images/Task-1%20logs-screenshot.jpeg)
+---
 ## ✅ Task 2: Multi-Container Setup With Docker Compose
 
 ### 🎯 Objective
@@ -142,3 +146,8 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
 ### 🛑 Stop the Stack
     docker compose down
+---
+## Logs
+
+![App logs showing successful quote delivery](images/Task-2%20logs-screenshot.jpeg)
+---
