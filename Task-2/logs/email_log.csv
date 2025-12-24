@@ -219,6 +219,7 @@ aladeyussuf.kofo@gmail.com,FAILED,Unable to send mail: _ssl.c:999: The handshake
 william.jackson@example.com,FAILED,Unable to send mail: _ssl.c:999: The handshake operation timed out
 ethan.harris@example.com,FAILED,Unable to send mail: _ssl.c:999: The handshake operation timed out
 mia.martin@example.com,FAILED,Unable to send mail: _ssl.c:999: The handshake operation timed out
-beejan@dataengineeringcommunity.com,SUCCESS,Sent Successfully
-solapeajiboye@gmail.com,SUCCESS,Sent Successfully
-ogunrindee2@gmail.com,SUCCESS,Sent Successfully
+fakayodeoluseguno@gmail.com,FAILED,Unable to send mail: _ssl.c:975: The handshake operation timed out
+fakayodeoluseguno@gmail.com,SUCCESS,Sent Successfully
+omosoladaramola@gmail.com,SUCCESS,Sent Successfully
+ericolukayodeo@gmail.com,SUCCESS,Sent Successfully
