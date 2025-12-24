@@ -84,11 +84,13 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
 ### 🌍 Published Image
 
-    Docker Image URL:
+    docker tag mindfuel-app:1.0 olusegun1992/mindfuel-app:1.0
+    docker push olusegun1992/mindfuel-app:1.0
+
 
 ### ⬇️ Pull and Run from Registry
-    docker pull olusegun1992/mindfuel-app
-    docker run --env-file .env olusegun1992/mindfuel-app
+    docker pull olusegun1992/mindfuel-app:1.0
+    docker run --env-file .env olusegun1992/mindfuel-app:1.0
 ---
 ## ✅ Task 2: Multi-Container Setup With Docker Compose
 
@@ -106,7 +108,7 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
 ### 🧩 compose.yml Features
 
-    •   Multiple services defined (app, db)
+    •   Multiple services defined (app, db, pgadmin)
 
     •   Ports mapped for external access
 
@@ -120,3 +122,23 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
     •   Database data is persisted using a Docker-managed volume
 
     •   SQL initialization handled via init.sql
+
+### ▶️ Start the Full Stack
+    docker compose up --build
+
+### ✔️ Verification Checklist
+
+    •   Entire stack starts successfully
+
+    •   App automatically connects to the database
+
+    •   Database initializes correctly
+
+    •   Quotes are fetched
+
+    •   Emails are delivered
+
+    •   Logs are generated without errors
+
+### 🛑 Stop the Stack
+    docker compose down
