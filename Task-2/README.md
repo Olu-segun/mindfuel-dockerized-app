@@ -12,23 +12,22 @@ The stack is designed to be reproducible, persistent, and easy to rebuild.
 ---
 
 ## 📂 Folder Structure
+<pre>
+mindfuel-dockerized-app/
+├── Task-2/
+│   ├── docker-compose.yml        # Docker Compose file
+│   ├── Dockerfile                # Python app container definition
+│   ├── requirements.txt          # Python dependencies
+│   ├── src/                      # Source folder for Python code
+│   │   ├── main.py
+│   │   ├── active_subscriber.py
+│   │   ├── extract_quote.py
+│   │   ├── send_email.py
+│   │   ├── database.py
+│   │   └── init.sql              # Database initialization script
+│   └── .env                      # Environment variables
+</pre>
 
-'''
-mindfuel-dockerized-app/ 
-│ 
-├── Task-2/ 
-│ ├── docker-compose.yml    # Docker Compose file 
-│ ├── Dockerfile            # Python app container definition 
-│ ├── requirements.txt      # Python dependencies 
-│ ├── src/ │                # Source folder for python codes
-  │ └── main.py             
-  | └── active_subscriber.py 
-  | └── extract_quote.py
-  | └── send_email.py
-  | └── database.py 
-│ ├── init.sql                 # Database initialization script 
-│ └── .env # Environment variables
-'''
 
 ---
 
@@ -41,14 +40,14 @@ mindfuel-dockerized-app/
   ```bash
   docker compose up --build
 
-Postgres (DB)
+### **Postgres (DB)**
 Provides persistent storage using a named Docker volume.
 
 Initializes with init.sql on first startup.
 
 Exposes port 5432 for external access.
 
-pgAdmin
+### **pgAdmin**
 Web-based database management tool.
 
 Accessible at http://localhost:5000.
@@ -57,41 +56,49 @@ Uses credentials defined in .env.
 
 ---
 
-📝 compose.yml Highlights
-Multiple services: app, postgres, pgadmin.
+## 📝 Compose.yml Highlights
 
-Ports mapped:
+Multiple services
 
-Postgres → 5432:5432
+- app
+- postgres
+- pgadmin
 
-pgAdmin → 5000:80
+Ports mapped
 
-Volumes:
+- Postgres → 5432:5432
+- pgAdmin → 5000:80
 
-db_data:/var/lib/postgresql/data for persistent DB storage.
+Volumes
 
-./init.sql:/docker-entrypoint-initdb.d/init.sql for initialization.
+- db_data:/var/lib/postgresql/data → persistent DB storage
+- ./init.sql:/docker-entrypoint-initdb.d/init.sql → initialization
 
-Environment variables: loaded securely from .env.
+Environment variables
 
-Dependencies: depends_on ensures the app waits for Postgres.
+- Loaded securely from .env
+
+Dependencies
+
+- depends_on ensures the app waits for Postgres
+
 
 ---
 
-🚀 Commands
-# Build and start the stack
+## 🚀 Commands
+### Build and start the stack
 docker compose up --build -d
 
-# Check running containers
+### Check running containers
 docker compose ps
 
-# View logs for the app
+### View logs for the app
 docker logs task-2-app-1
 
-# Stop and remove containers + volumes
+### Stop and remove containers + volumes
 docker compose down -v
 
-🖼️ Architecture Diagram
+## 🖼️ Architecture Diagram
 
                 +-------------------+
                 |    Python App     |
@@ -113,29 +120,16 @@ docker compose down -v
                 +-------------------+
 
    All services communicate over the shared Docker network: mindfuel_network
-
-Mermaid Diagram
-
-flowchart LR
-    A[Python App<br/>task-2-app-1] --> B[Postgres DB<br/>task-2-postgres-1]
-    C[pgAdmin<br/>task-2-pgadmin-1] --> B
-
-    subgraph mindfuel_network
-    A
-    B
-    C
-    end
-
 ---
-✅ Verification
+## ✅ Verification
 
-# Start the stack
+#### Start the stack
     docker compose up --build -d
 
-# Check containers
+#### Check containers
     docker compose ps
 
-🧠 Notes
+## 🧠 Notes
 Postgres only runs init.sql on first database creation.
 Use docker compose down -v to reset volumes if you need to re-run initialization.
 
@@ -143,3 +137,6 @@ Retry logic in the app ensures stable DB connections during startup.
 
 Secrets are managed via .env for security and flexibility.
 
+## Logs
+
+![App logs showing successful quote delivery](images/logs-screenshot.png)
