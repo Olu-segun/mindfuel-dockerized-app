@@ -1,5 +1,90 @@
-📦 MindFuel – Dockerized Quote Delivery Service
+# 📦 MindFuel – Dockerized Quote Delivery Service
 
 This repository contains two tasks demonstrating how to containerize a Python-based email quote delivery service and run it as a multi-container application using Docker and Docker Compose.
 
 The project fetches inspirational quotes, stores logs, connects to a relational database, and delivers emails to active subscribers.
+---
+## 📁 Repository Structure
+
+.
+├── Task-1/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── src/
+│   ├── logs/
+│   ├── .env
+│   └── README.md
+│
+├── Task-2/
+│   ├── compose.yml
+│   ├── init.sql
+│   ├── .env
+│   ├── src/
+│   ├── logs/
+│   └── README.md 
+│
+└── README.md 
+---
+## ✅ Task 1: Containerize the Python Email Delivery Service
+#### 🎯 Objective
+
+Package the Python quote-delivery service into a portable, reproducible Docker image and publish it to a container registry.
+
+### 🔧 Requirements Implemented
+
+•   Lightweight Python base image
+
+•   Python dependencies installed via requirements.txt
+
+•   Environment variables loaded using .env
+
+•   Application code copied into the container
+
+•   Clear entrypoint to start the application
+
+•   Image built, tested, and published to a registry
+---
+### 🐳 Dockerfile Overview
+
+•   The Dockerfile:
+
+•   Uses python:3.11-slim
+
+•   Installs required system and Python dependencies
+
+•   Copies application source code
+
+•   Loads environment variables
+
+•   Starts the quote delivery service automatically
+
+### 🛠️ Build the Image Locally
+    docker build -t mindfuel-app .
+
+### ▶️ Run the Container    
+    docker run --env-file .env mindfuel-app
+
+### ✔️ Verified Behavior
+
+•   Quotes are fetched successfully
+
+•   Database connection is established
+
+•   Emails are sent to subscribers
+
+•   Logs are written to the logs/ directory
+
+### 🌍 Published Image
+
+    Docker Image URL:
+
+### ⬇️ Pull and Run from Registry
+    docker pull olusegun1992/mindfuel-app
+    docker run --env-file .env olusegun1992/mindfuel-app
+
+---
+✅ Task 2: Multi-Container Setup With Docker Compose
+🎯 Objective
+
+Run the Python application and database together using Docker Compose.
+
