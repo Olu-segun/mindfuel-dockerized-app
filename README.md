@@ -102,7 +102,7 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
     •   Db – PostgreSQL database
 
-    •   pgadmin - App – Python quote delivery service
+    •   pgadmin - Web-based PostgreSQL administration and monitoring tool
 
 ### 🧩 compose.yml Features
 
