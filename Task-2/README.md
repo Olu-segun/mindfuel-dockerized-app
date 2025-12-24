@@ -12,6 +12,7 @@ The stack is designed to be reproducible, persistent, and easy to rebuild.
 ---
 
 ## 📂 Folder Structure
+<pre>
 mindfuel-dockerized-app/
 ├── Task-2/
 │   ├── docker-compose.yml        # Docker Compose file
@@ -25,7 +26,7 @@ mindfuel-dockerized-app/
 │   │   ├── database.py
 │   │   └── init.sql              # Database initialization script
 │   └── .env                      # Environment variables
-
+</pre>
 
 
 ---
