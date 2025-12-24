@@ -6,22 +6,35 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 ---
 ## 📁 Repository Structure
 
-.
+<pre>
 ├── Task-1/
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   ├── src/
+        ├── main.py
+│   │   ├── active_subscriber.py
+│   │   ├── extract_quote.py
+│   │   ├── send_email.py
+│   │   ├── database.py
 │   ├── logs/
 │   ├── .env
 │   └── README.md
 │
+
 ├── Task-2/
-│   ├── compose.yml
-│   ├── init.sql
-│   ├── .env
-│   ├── src/
-│   ├── logs/
-│   └── README.md 
+│   ├── docker-compose.yml        # Docker Compose file
+│   ├── Dockerfile                # Python app container definition
+│   ├── requirements.txt          # Python dependencies
+│   ├── src/                      # Source folder for Python code
+│   │   ├── main.py
+│   │   ├── active_subscriber.py
+│   │   ├── extract_quote.py
+│   │   ├── send_email.py
+│   │   ├── database.py
+│   │   └── init.sql              # Database initialization script
+│   └── .env                      # Environment variables
+</pre>
+
 │
 └── README.md 
 ---
