@@ -13,6 +13,7 @@ The stack is designed to be reproducible, persistent, and easy to rebuild.
 
 ## 📂 Folder Structure
 
+'''
 mindfuel-dockerized-app/ 
 │ 
 ├── Task-2/ 
@@ -27,7 +28,7 @@ mindfuel-dockerized-app/
   | └── database.py 
 │ ├── init.sql                 # Database initialization script 
 │ └── .env # Environment variables
-
+'''
 
 ---
 
