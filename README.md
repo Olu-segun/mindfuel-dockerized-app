@@ -74,13 +74,13 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
 ### ✔️ Verified Behavior
 
-    • Quotes are fetched successfully
+    •   Quotes are fetched successfully
 
-    • Database connection is established
+    •   Database connection is established
 
-    • Emails are sent to subscribers
+    •   Emails are sent to subscribers
 
-    • Logs are written to the logs/ directory
+    •   Logs are written to the logs/ directory
 
 ### 🌍 Published Image
 
@@ -89,9 +89,9 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 ### ⬇️ Pull and Run from Registry
     docker pull olusegun1992/mindfuel-app
     docker run --env-file .env olusegun1992/mindfuel-app
-
 ---
 ## ✅ Task 2: Multi-Container Setup With Docker Compose
+
 ### 🎯 Objective
     Run the Python application, database and pgadmin together using Docker Compose.
 
@@ -103,3 +103,20 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
     •   Db – PostgreSQL database
 
     •   pgadmin - App – Python quote delivery service
+
+### 🧩 compose.yml Features
+
+    •   Multiple services defined (app, db)
+
+    •   Ports mapped for external access
+
+    •   Persistent database storage using Docker volumes
+
+    •   Environment variables loaded securely from .env
+
+    •   Service dependencies defined using depends_on
+
+## 📦 Volumes
+    •   Database data is persisted using a Docker-managed volume
+
+    •   SQL initialization handled via init.sql
