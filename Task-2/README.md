@@ -58,32 +58,30 @@ Uses credentials defined in .env.
 
 ## 📝 Compose.yml Highlights
 
-• Multiple services
-  •app
+Multiple services
 
-postgres
-
-pgadmin
+- app
+- postgres
+- pgadmin
 
 Ports mapped
 
-Postgres → 5432:5432
-
-pgAdmin → 5000:80
+- Postgres → 5432:5432
+- pgAdmin → 5000:80
 
 Volumes
 
-db_data:/var/lib/postgresql/data → persistent DB storage
-
-./init.sql:/docker-entrypoint-initdb.d/init.sql → initialization
+- db_data:/var/lib/postgresql/data → persistent DB storage
+- ./init.sql:/docker-entrypoint-initdb.d/init.sql → initialization
 
 Environment variables
 
-Loaded securely from .env
+- Loaded securely from .env
 
 Dependencies
 
-depends_on ensures the app waits for Postgres
+- depends_on ensures the app waits for Postgres
+
 
 ---
 
