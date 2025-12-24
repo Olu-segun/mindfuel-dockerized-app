@@ -12,23 +12,21 @@ The stack is designed to be reproducible, persistent, and easy to rebuild.
 ---
 
 ## 📂 Folder Structure
+mindfuel-dockerized-app/
+├── Task-2/
+│   ├── docker-compose.yml        # Docker Compose file
+│   ├── Dockerfile                # Python app container definition
+│   ├── requirements.txt          # Python dependencies
+│   ├── src/                      # Source folder for Python code
+│   │   ├── main.py
+│   │   ├── active_subscriber.py
+│   │   ├── extract_quote.py
+│   │   ├── send_email.py
+│   │   ├── database.py
+│   │   └── init.sql              # Database initialization script
+│   └── .env                      # Environment variables
 
-'''
-mindfuel-dockerized-app/ 
-│ 
-├── Task-2/ 
-│ ├── docker-compose.yml    # Docker Compose file 
-│ ├── Dockerfile            # Python app container definition 
-│ ├── requirements.txt      # Python dependencies 
-│ ├── src/ │                # Source folder for python codes
-  │ └── main.py             
-  | └── active_subscriber.py 
-  | └── extract_quote.py
-  | └── send_email.py
-  | └── database.py 
-│ ├── init.sql                 # Database initialization script 
-│ └── .env # Environment variables
-'''
+
 
 ---
 
