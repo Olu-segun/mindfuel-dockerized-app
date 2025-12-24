@@ -108,12 +108,12 @@ docker compose down -v
 
    All services communicate over the shared Docker network: mindfuel_network
 ---
-✅ Verification
+## ✅ Verification
 
-# Start the stack
+#### Start the stack
     docker compose up --build -d
 
-# Check containers
+#### Check containers
     docker compose ps
 
 ## 🧠 Notes
