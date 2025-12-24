@@ -40,14 +40,14 @@ mindfuel-dockerized-app/
   ```bash
   docker compose up --build
 
-Postgres (DB)
+### ** Postgres (DB) **
 Provides persistent storage using a named Docker volume.
 
 Initializes with init.sql on first startup.
 
 Exposes port 5432 for external access.
 
-pgAdmin
+### ** pgAdmin  **
 Web-based database management tool.
 
 Accessible at http://localhost:5000.
@@ -56,7 +56,7 @@ Uses credentials defined in .env.
 
 ---
 
-📝 compose.yml Highlights
+## 📝 compose.yml Highlights
 Multiple services: app, postgres, pgadmin.
 
 Ports mapped:
@@ -77,20 +77,20 @@ Dependencies: depends_on ensures the app waits for Postgres.
 
 ---
 
-🚀 Commands
-# Build and start the stack
+## 🚀 Commands
+### Build and start the stack
 docker compose up --build -d
 
-# Check running containers
+### Check running containers
 docker compose ps
 
-# View logs for the app
+### View logs for the app
 docker logs task-2-app-1
 
-# Stop and remove containers + volumes
+### Stop and remove containers + volumes
 docker compose down -v
 
-🖼️ Architecture Diagram
+## 🖼️ Architecture Diagram
 
                 +-------------------+
                 |    Python App     |
@@ -112,7 +112,7 @@ docker compose down -v
                 +-------------------+
 
    All services communicate over the shared Docker network: mindfuel_network
-
+<pre>
 Mermaid Diagram
 
 flowchart LR
@@ -124,7 +124,7 @@ flowchart LR
     B
     C
     end
-
+</pre>
 ---
 ✅ Verification
 
