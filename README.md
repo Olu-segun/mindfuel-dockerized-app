@@ -37,23 +37,22 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 </pre>
 ---
 ## ✅ Task 1: Containerize the Python Email Delivery Service
-#### 🎯 Objective
-
-Package the Python quote-delivery service into a portable, reproducible Docker image and publish it to a container registry.
+### 🎯 Objective
+    Package the Python quote-delivery service into a portable, reproducible Docker image and publish it to a container registry.
 
 ### 🔧 Requirements Implemented
 
-•   Lightweight Python base image
+    •   Lightweight Python base image
 
-•   Python dependencies installed via requirements.txt
+    •   Python dependencies installed via requirements.txt
 
-•   Environment variables loaded using .env
+    •   Environment variables loaded using .env
 
-•   Application code copied into the container
+    •   Application code copied into the container
 
-•   Clear entrypoint to start the application
+    •   Clear entrypoint to start the application
 
-•   Image built, tested, and published to a registry
+    •   Image built, tested, and published to a registry
 ---
 ### 🐳 Dockerfile Overview
 
