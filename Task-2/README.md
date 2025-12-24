@@ -40,14 +40,14 @@ mindfuel-dockerized-app/
   ```bash
   docker compose up --build
 
-### ** Postgres (DB) **
+### **Postgres (DB)**
 Provides persistent storage using a named Docker volume.
 
 Initializes with init.sql on first startup.
 
 Exposes port 5432 for external access.
 
-### ** pgAdmin  **
+### **pgAdmin**
 Web-based database management tool.
 
 Accessible at http://localhost:5000.
@@ -56,17 +56,12 @@ Uses credentials defined in .env.
 
 ---
 
-## 📝 compose.yml Highlights
+## 📝 Compose.yml Highlights
 Multiple services: app, postgres, pgadmin.
-
 Ports mapped:
-
 Postgres → 5432:5432
-
 pgAdmin → 5000:80
-
 Volumes:
-
 db_data:/var/lib/postgresql/data for persistent DB storage.
 
 ./init.sql:/docker-entrypoint-initdb.d/init.sql for initialization.
@@ -112,19 +107,6 @@ docker compose down -v
                 +-------------------+
 
    All services communicate over the shared Docker network: mindfuel_network
-<pre>
-Mermaid Diagram
-
-flowchart LR
-    A[Python App<br/>task-2-app-1] --> B[Postgres DB<br/>task-2-postgres-1]
-    C[pgAdmin<br/>task-2-pgadmin-1] --> B
-
-    subgraph mindfuel_network
-    A
-    B
-    C
-    end
-</pre>
 ---
 ✅ Verification
 
@@ -134,7 +116,7 @@ flowchart LR
 # Check containers
     docker compose ps
 
-🧠 Notes
+## 🧠 Notes
 Postgres only runs init.sql on first database creation.
 Use docker compose down -v to reset volumes if you need to re-run initialization.
 
