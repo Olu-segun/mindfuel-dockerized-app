@@ -67,7 +67,7 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
     •   Starts the quote delivery service automatically
 
 ### 🛠️ Build the Image Locally
-    docker build -t mindfuel-app .
+    docker build -t mindfuel-app:1.0 .
 
 ### ▶️ Run the Container    
     docker run --env-file .env mindfuel-app:1.0
