@@ -70,7 +70,7 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
     docker build -t mindfuel-app .
 
 ### ▶️ Run the Container    
-    docker run --env-file .env mindfuel-app
+    docker run --env-file .env mindfuel-app:1.0
 
 ### ✔️ Verified Behavior
 
