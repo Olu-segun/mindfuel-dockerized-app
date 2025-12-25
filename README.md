@@ -113,7 +113,7 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
 ### 🧩 compose.yml Features
 
-    •   Multiple services defined (app, db, pgadmin)
+    •   Multiple services defined (app, postgres database, pgadmin)
 
     •   Ports mapped for external access
 
@@ -128,8 +128,17 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
     •   SQL initialization handled via init.sql
 
+---
+## 🚀 Commands
+
 ### ▶️ Start the Full Stack
-    docker compose up --build
+        docker compose up --build
+
+###  🐳 Check running containers
+        docker compose ps
+
+###  📜 View logs for the app
+        docker logs task-2-app-1
 
 ### ✔️ Verification Checklist
 
@@ -145,8 +154,37 @@ The project fetches inspirational quotes, stores logs, connects to a relational 
 
     •   Logs are generated without errors
 
-### 🛑 Stop the Stack
-    docker compose down
+### 🛑 Stop the Stack + volumes
+    docker compose down -v
+---
+
+### 🖼️ Architecture Diagram
+            +-------------------+
+            |    Python App     |
+            |  (task-2-app-1)   |
+            +---------+---------+
+                      |
+                      | connects via host "postgres"
+                      |
+            +---------v---------+
+            |   PostgreSQL DB   |
+            | (task-2-postgres) |
+            +---------+---------+
+                      |
+                      | managed via host "postgres"
+                      |
+            +---------v---------+
+            |      pgAdmin      |
+            | (task-2-pgadmin)  |
+            +-------------------+
+---
+
+### 🧠 Notes
+    Postgres only runs init.sql on first database creation. Use docker compose down -v to reset volumes if you need to re-run initialization.
+
+    Retry logic in the app ensures stable DB connections during startup.
+
+    Secrets are managed via .env for security and flexibility.   
 ---
 ## Logs
 
